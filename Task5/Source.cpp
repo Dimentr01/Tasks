@@ -47,6 +47,7 @@ void final1(list** A, int t)
         forO++;
         before = *A;
     }
+    delete O;
 }
 
 
@@ -87,7 +88,9 @@ void writeln(list* A) {
             cout << "x^" << A->degree;
         else if (A->coefficient == 1 && A->degree == 1)
             cout << "x";
+        delete B;
     }
+    
 }
 
 int main() {
@@ -116,4 +119,5 @@ int main() {
     cout << "\nThis what I write\n";
     final1(&A, t);
     writeln(A);
+    delete A;
 }
