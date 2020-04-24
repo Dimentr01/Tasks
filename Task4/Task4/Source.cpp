@@ -234,77 +234,75 @@ void delete_all_minus_elements(list** A)
 int main() {
     srand(time(NULL));
     cout << "P.s. In my list five elements(they are random); you can change number and value in code\n";
-	list *A = new list();
-    for (int i=0;i<5;i++)
+    list* A = new list();
+    for (int i = 0; i < 5; i++)
     {
         list* B = new list();
         B->id = rand() % 20;
         if (i == 0)
             A = NULL;
-        B->next=A;
+        B->next = A;
         A = B;
     }
-	string a;
+    string a;
     cout << "Choose A.number what you want:\n" << "B task is individual\n" << "A1 push element in begin\n" << "A2 push list in begin\n" << "A3 show all elements\n";
     cout << "A4 insert before given element\n" << "A5 insert after given element\n" << "A6 insert last element\n" << "A7 delete first element\n" << "A8 delete last element\n";
-    cout <<"A9 delete given element\n"<<"B4 delete all minus elements\n"<<"\nIf you want end, write Exit\n";
-    for (int i = 0; i < 20; i++)
+    cout << "A9 delete given element\n" << "B4 delete all minus elements\n" << "\nIf you want end, write Exit\n";
+while (1==1)
+ {
+    cin >> a;
+    if (Equal(a, "A1") == 1)
     {
-        cin >> a;
-        if (Equal(a, "A1") == 1)
-        {
-            push_element_in_begin(&A);
-            cout << "Complete\n";
-        }
-        if (Equal(a, "A2") == 1)
-        {
-            push_list_in_begin(&A);
-            cout << "Complete\n";
-        }
-         if (Equal(a, "A3") == 1)
-         {
-             writeln(A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "A4") == 1)
-         {
-             insert_before_given_element(&A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "A5") == 1)
-         {
-             insert_after_given_element(&A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "A6") == 1)
-         {
-             insert_last_element(&A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "A7") == 1)
-         {
-             delete_first_element(&A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "A8") == 1)
-         {
-             delete_last_element(&A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "A9") == 1)
-         {
-             delete_given_element(&A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "B4") == 1)
-         {
-             delete_all_minus_elements(&A);
-             cout << "Complete\n";
-         }
-         if (Equal(a, "Exit") == 1)
-         {
-             break;
-         }
+        push_element_in_begin(&A);
+        cout << "Complete\n";
     }
+    if (Equal(a, "A2") == 1)
+    {
+        push_list_in_begin(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "A3") == 1)
+    {
+        writeln(A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "A4") == 1)
+    {
+        insert_before_given_element(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "A5") == 1)
+    {
+        insert_after_given_element(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "A6") == 1)
+    {
+        insert_last_element(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "A7") == 1)
+    {
+        delete_first_element(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "A8") == 1)
+    {
+        delete_last_element(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "A9") == 1)
+    {
+        delete_given_element(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "B4") == 1)
+    {
+        delete_all_minus_elements(&A);
+        cout << "Complete\n";
+    }
+    if (Equal(a, "Exit") == 1)
+        break;     
+ }
     delete A;
 }
